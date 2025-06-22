@@ -10,9 +10,11 @@
 // Vergadering om 15:30
 // Vergadering om 17:00
 // ==========================================
-
-const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
-
+//
+// const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
+// for(let i = 0; i < meetingTimes.length; i++) {
+//     console.log("Vergadering om " + meetingTimes[i]);
+// }
 
 // ==========================================
 // Opdracht 2. In tegenstelling tot Bob, werken de andere medewerkers van Loop-it Solutions wél hard.
@@ -24,8 +26,13 @@ const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
 // Verwachtte uitkomst:
 // console.log(salaries) geeft [3360, 2467.5, 2940, 3675, 2940]
 // ==========================================
-
-const salaries = [3200, 2350, 2800, 3500, 2800];
+//
+// const salaries = [3200, 2350, 2800, 3500, 2800];//salaries is buiten loop gedefinieerd dus heeft global scope
+// for (let i = 0; i < salaries.length; i++) {
+//     let newSalary = salaries[i] * 1.05;
+//     salaries[i] = newSalary;//als je binnen accolades logt dan log je wat je binnen de loop definieert. Dus in dit geval elke stap door de loop.
+// }
+// console.log(salaries);//loggen doe je buiten accolades omdat je het pas wil printen nadat de loops zijn geitereerd en je wilt het resultaat zien.
 
 
 // ==========================================
@@ -37,9 +44,12 @@ const salaries = [3200, 2350, 2800, 3500, 2800];
 // console.log(birthYears) geeft [30, 28, 35, 22, 43]
 // ==========================================
 
-const birthYears = [1995, 1997, 1990, 2003, 1982];
-
-
+// const birthYears = [1995, 1997, 1990, 2003, 1982];
+// for (let i = 0; i < birthYears.length; i++) {
+//     let age = 2025 - birthYears[i];
+//     birthYears[i] = age;
+// }
+// console.log(birthYears);
 // ==========================================
 // Opdracht 4. Bob houdt bij hoeveel verlofuren medewerkers per maand opnemen. Nu wil hij voor het nieuwe jaar een bonusstructuur toepassen:
 // - Even getallen (bijvoorbeeld 2, 4, 6 uur) worden vermenigvuldigd met 2, omdat medewerkers die hun verlof in nette blokken opnemen, worden beloond.
@@ -50,7 +60,16 @@ const birthYears = [1995, 1997, 1990, 2003, 1982];
 // console.log(leaveHours) geeft [12, 4.5, 4, 3.5, 1.5]
 // ==========================================
 
-const leaveHours = [6, 9, 2, 7, 3];
+// const leaveHours = [6, 9, 2, 7, 3];
+//
+// for (let i = 0; i < leaveHours.length; i++) {
+//     if (leaveHours[i] % 2 === 0) {
+//         leaveHours[i] = leaveHours[i] * 2;
+//     } else if (leaveHours[i] % 2 === 1) {
+//         leaveHours[i] = leaveHours[i] * 0.5;
+//     }
+// }
+// console.log(leaveHours);
 
 
 // ==========================================
@@ -68,5 +87,9 @@ const leaveHours = [6, 9, 2, 7, 3];
 // ==========================================
 
 const productionCodes = [" abC123  ", "  DEF456", "ghi789  ", "JKL012"];
-
+for (let i = 0; i < productionCodes.length; i++) {
+    productionCodes[i] = productionCodes[i].trim();
+    productionCodes[i] = productionCodes[i].toUpperCase();
+}
+console.log(productionCodes);
 
